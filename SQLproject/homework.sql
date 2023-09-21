@@ -62,3 +62,6 @@ WHERE
 UPDATE customers
 SET ContactName = NULL
 WHERE Country <> 'China';
+
+
+
