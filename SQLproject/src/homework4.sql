@@ -6,6 +6,14 @@ GROUP BY CategoryID
 
 --Вывести ТОП-3 стран по количеству доставленных заказов
 
+SELECT
+    Customers.Country,
+    count(*) as amount_orders
+FROM [Orders]
+    join Customers on Orders.CustomerID = Customers.CustomerID
+group by Customers.Country
+order by amount_orders desc
+    limit 3
 
 --Вывести названия категорий, в которых более 10 товаров
 SELECT Categories.CategoryName
